@@ -1,0 +1,129 @@
+{
+    "type": "modal",
+    "callback_id": "learn",
+    "title": {
+        "type": "plain_text",
+        "text": "My App",
+        "emoji": true
+    },
+    "submit": {
+        "type": "plain_text",
+        "text": "Submit",
+        "emoji": true
+    },
+    "close": {
+        "type": "plain_text",
+        "text": "Cancel",
+        "emoji": true
+    },
+    "blocks": [
+        {
+            "type": "header",
+            "text": {
+                "type": "plain_text",
+                "text": "Log Learning Activity",
+                "emoji": true
+            }
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "It is a great way to track your *learning activity*"
+            }
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "type": "input",
+            "block_id": "activity",
+            "element": {
+                "type": "plain_text_input",
+                "action_id": "activity"
+            },
+            "label": {
+                "type": "plain_text",
+                "text": "Learning activity name",
+                "emoji": true
+            }
+        },
+        {
+            "type": "input",
+            "block_id": "selectedActivity",
+            "element": {
+                "type": "static_select",
+                "action_id": "selectedActivity",
+                "placeholder": {
+                    "type": "plain_text",
+                    "text": "Select an item",
+                    "emoji": true
+                },
+                "options": [
+                    {
+                        "text": {
+                            "type": "plain_text",
+                            "text": "Trailhead",
+                            "emoji": true
+                        },
+                        "value": "value-0"
+                    },
+                    {
+                        "text": {
+                            "type": "plain_text",
+                            "text": "Training",
+                            "emoji": true
+                        },
+                        "value": "value-1"
+                    },
+                    {
+                        "text": {
+                            "type": "plain_text",
+                            "text": "In Person Session",
+                            "emoji": true
+                        },
+                        "value": "value-2"
+                    }
+                ]
+            },
+            "label": {
+                "type": "plain_text",
+                "text": "Learning type",
+                "emoji": true
+            }
+        },
+        {
+            "type": "input",
+            "block_id": "activityDatePicker",
+            "element": {
+                "type": "datepicker",
+                "action_id": "activityDatePicker",
+                "initial_date": "1990-04-28",
+                "placeholder": {
+                    "type": "plain_text",
+                    "text": "Select a date",
+                    "emoji": true
+                }
+            },
+            "label": {
+                "type": "plain_text",
+                "text": "Learning activity date",
+                "emoji": true
+            }
+        },
+        {
+            "type": "input",
+            "block_id": "activityHours",
+            "element": {
+                "type": "number_input",
+                "is_decimal_allowed": false,
+                "action_id": "activityHours"
+            },
+            "label": {
+                "type": "plain_text",
+                "text": "Learning duration (Hours)",
+                "emoji": true
+            }
+        }
+    ]
+}
